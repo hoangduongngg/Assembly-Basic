@@ -1,0 +1,47 @@
+; multi-segment executable file template.
+
+data segment
+; add your data here!
+pa equ 0
+pb equ 2
+pc equ 4
+pd equ 6
+ends
+
+stack segment
+dw   128  dup(0)
+ends
+
+code segment
+start:
+; set segment registers:
+mov ax, data
+mov ds, ax
+mov es, ax
+
+; add your code here
+
+
+mov al,11111110b
+tiep:
+out pa,al
+call timer
+rol al,1
+jmp tiep
+
+timer:
+mov cx,60000
+T:
+nop
+nop
+nop
+loop T
+ret
+
+mov ax,4c00h
+int 21h
+ends
+
+end start ; set entry point and stop the assembler.
+
+

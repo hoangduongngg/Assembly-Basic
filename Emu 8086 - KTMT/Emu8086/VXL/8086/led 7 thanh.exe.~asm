@@ -1,0 +1,40 @@
+; multi-segment executable file template.
+
+data segment
+pa equ 1
+pb equ 3
+pc equ 5
+pd equ 7
+ends
+
+stack segment
+dw   128  dup(0)
+ends
+
+code segment
+start:
+mov al,80h
+out pd,al
+
+top:
+mov al,11000000b
+out pa,al
+call timer
+mov al,11111111b
+out pa,al
+call timer
+jmp top
+timer:
+mov cx,30000
+T:
+nop
+nop
+nop
+loop T
+ret
+
+ends
+
+end start ; set entry point and stop the assembler.
+
+

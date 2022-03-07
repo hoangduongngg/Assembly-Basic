@@ -1,0 +1,17 @@
+< THE SYMBOL TABLE >  nut nhan 1.exe  --  emu8086 assembler version: 4.08 
+===================================================================================================
+Name                     	Offset    	Size      	Type      	Segment   
+===================================================================================================
+DATA                     	00000     	-5        	SEGMENT   	(ITSELF)  
+STACK                    	00000     	-5        	SEGMENT   	(ITSELF)  
+CODE                     	00010     	-5        	SEGMENT   	(ITSELF)  
+START                    	00000     	-1        	LABEL     	code      
+TIEP                     	0000B     	-1        	LABEL     	code      
+LEDVANG                  	00017     	-1        	LABEL     	code      
+LEDXANH                  	00022     	-1        	LABEL     	code      
+TIMER                    	0002D     	-1        	LABEL     	code      
+T                        	00030     	-1        	LABEL     	code      
+===================================================================================================
+[ 11/27/2014  --  10:49:37 AM ] 
+< END >
+ 
